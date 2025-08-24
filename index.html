@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название вашего приложения — Загрузите прямо сейчас!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpeg'); /* Укажите путь к вашей картинке */
+            background-size: cover; /* Масштабирует изображение до полного покрытия экрана */
+            background-position: center; /* Центрирует изображение по центру */
+            background-repeat: no-repeat; /* Изображение не повторяется */
+            background-attachment: fixed; /* Фиксирует изображение относительно окна браузера */
+            color: #fff; /* Цвет текста белый для контраста с фоном */
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Тёмная маска с прозрачностью 50% */
+        }
+
+        body > * { /* Применяем относительное позиционирование ко всему контенту */
+            position: relative;
+            z-index: 1; /* Поднимаем элементы над маской */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Расстояние между названием и логотипом */
+        }
+
+        img.logo {
+            width: 512px;
+            height: 512px;
+            object-fit: contain; /* Поддерживает пропорции изображения */
+            border-radius: 64px; /* Радиус закругления углов логотипа */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 5px;
+            background-color: rgba(10, 141, 255, 0.8); /* Полупрозрачный синий фон кнопки */
+            color: white;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        }
+
+        a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,.15);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Раздел с заголовком и логотипом -->
+    <header>
+        <h1>Игра на Android Космическая Викторина</h1>
+       
+    </header>
+
+    <p>Загрузите наше удобное приложение прямо сейчас!</p>
+    <a href="https://play.google.com/store/apps/details?id=com.bonusgaming.jessy">Установить из Google Play</a>
+
+</body>
+</html>
