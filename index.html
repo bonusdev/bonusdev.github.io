@@ -8,11 +8,11 @@
         body {
             font-family: Arial, sans-serif;
             background-image: url('background.jpeg'); /* Укажите путь к вашей картинке */
-            background-size: cover; /* Масштабирует изображение до полного покрытия экрана */
-            background-position: center; /* Центрирует изображение по центру */
-            background-repeat: no-repeat; /* Изображение не повторяется */
-            background-attachment: fixed; /* Фиксирует изображение относительно окна браузера */
-            color: #fff; /* Цвет текста белый для контраста с фоном */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
             text-align: center;
             padding-top: 50px;
         }
@@ -24,76 +24,89 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Тёмная маска с прозрачностью 50% */
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        body > * { /* Применяем относительное позиционирование ко всему контенту */
+        body > * {
             position: relative;
-            z-index: 1; /* Поднимаем элементы над маской */
+            z-index: 1;
         }
 
         header {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px; /* Расстояние между названием и логотипом */
-        }
-
-        img.logo {
-            width: 512px;
-            height: 512px;
-            object-fit: contain; /* Поддерживает пропорции изображения */
-            border-radius: 64px; /* Радиус закругления углов логотипа */
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        a {
+        .game-block {
+            margin-top: 100px;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+
+        .game-image {
+            width: 33%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        a.button {
             display: inline-block;
             padding: 15px 30px;
             border-radius: 5px;
-            background-color: rgba(10, 141, 255, 0.8); /* Полупрозрачный синий фон кнопки */
+            background-color: rgba(10, 141, 255, 0.8);
             color: white;
             text-decoration: none;
             transition: all .3s ease-in-out;
             box-shadow: 0 4px 6px rgba(0,0,0,.1);
         }
 
-        a:hover {
+        a.button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 10px rgba(0,0,0,.15);
+        }
+
+        .contact-text {
+            color: #ff4d4d; /* Красные тона для текста с почтой */
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .contact-link {
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    
-    <!-- Раздел с заголовком и логотипом -->
-    <header>
+
+    <!-- Игра 1 -->
+    <div class="game-block">
+      
         <h1>Игра на Android Космическая Викторина</h1>
-       
-    </header>
+        <a href="https://play.google.com/store/apps/details?id=com.bonusgaming.jessy" class="button">Установить из Google Play</a>
+    </div>
 
-    <a href="https://play.google.com/store/apps/details?id=com.bonusgaming.jessy">Установить из Google Play</a>
-        <header>
-        <h1>Игра на Android Hockey Games</h1>
-       
-    </header>
 
-    <a href="https://play.google.com/store/apps/details?id=com.bonusgaming.hockeygames">Установить из Google Play</a>
+    <!-- Игра 2 -->
+    <div class="game-block">
     
-            <header>
-        <h1>Игра на IOS Hockey Games 3D</h1>
-       
-    </header>
+        <h1>Игра Hockey Games</h1>
+        <a href="https://play.google.com/store/apps/details?id=com.bonusgaming.hockeygames" class="button">Установить из Google Play</a>
+          <a href="https://itunes.apple.com/app/1450261520" class="button">Установить из App Store</a>
+    </div>
 
- 
-    <a href="https://itunes.apple.com/app/1450261520">Установить из App Store</a>
-    
-    
-    <p>Если у вас есть вопросы — напишите нам на почту: <a href="mailto:devgame.devid@gmail.com" style="color: #fff; text-decoration: underline;">✉ Написать</a></p>
+    <!-- Строка с почтой -->
+    <p class="contact-text">Если у вас есть вопросы — напишите нам на почту: <a href="mailto:devgame.devid@gmail.com" class="contact-link">✉ Написать</a></p>
 
 </body>
 </html>
